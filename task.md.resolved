@@ -1,0 +1,10 @@
+- [x] Initialisation du projet (index.html, style.css, main.js)
+- [x] Création du Design Système (Couleurs, Typographie, Variables CSS)
+- [x] Développement du Header & Héros Section
+- [x] Développement de la section Services (Expertise)
+- [x] Développement de la section Portfolio & Réalisations
+- [x] Développement de la section Laboratoire & Équipement
+- [x] Création du formulaire de Devis
+- [x] Ajout des animations et micro-interactions
+- [x] Génération des images d'illustration professionnelles
+- [x] Revue finale et optimisation SEO
