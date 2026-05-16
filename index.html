@@ -3,232 +3,193 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GEOSAFE | Premium Geotechnical Engineering & Soil Analysis</title>
-    <meta name="description" content="GEOSAFE is a world-class geotechnical engineering bureau. Build on certainty with our advanced soil studies and risk analysis.">
+    <title>GEOSAFE | Bureau d'études TECHNIQUES</title>
+    <meta name="description" content="GEOSAFE est un bureau d'études technique marocain, partenaire de confiance en Ingénierie Géotechnique.">
     <link rel="stylesheet" href="index.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Lucide Icons for premium feel -->
+    
+    <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- FontAwesome for fallback -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body>
+<body class="hover-target">
 
     <!-- Loading Screen -->
     <div class="loader" id="loader">
-        <img src="logo_square.png" alt="GEOSAFE" style="width: 100px;">
-        <div class="loader-bar"><div class="loader-progress"></div></div>
+        <div class="loader-text">GEOSAFE</div>
     </div>
 
-    <!-- Premium Background & Effects -->
-    <div class="noise-overlay"></div>
-    <div class="bg-blob" id="blob-1"></div>
-    <div class="bg-blob" id="blob-2" style="top: 60%; left: 80%; background: radial-gradient(circle, rgba(26, 115, 232, 0.15) 0%, transparent 70%);"></div>
-    
-    <div class="custom-cursor"></div>
-    <div class="cursor-follower"></div>
+    <!-- Custom Cursor -->
+    <div class="cursor-dot"></div>
+    <div class="cursor-ring"></div>
 
-    <header>
-        <div class="container nav-container">
-            <a href="#" class="logo">
-                <img src="logo_horizontal.png" alt="GEOSAFE" style="height: 40px;">
+    <!-- Navigation -->
+    <header id="header" class="hero-dark-context">
+        <div class="nav-container">
+            <a href="#" class="logo hover-target">
+                GEO<span>SAFE</span>
             </a>
             <nav class="nav-links">
-                <a href="#services">Expertises</a>
-                <a href="#portfolio">Portfolio</a>
-                <a href="#about">Innovation</a>
-                <a href="#quote">Contact</a>
+                <a href="#about" class="hover-target">À Propos</a>
+                <a href="#expertise" class="hover-target">Expertises</a>
+                <a href="#valeurs" class="hover-target">Valeurs</a>
+                <a href="#contact" class="hover-target">Contact</a>
             </nav>
-            <div class="nav-actions">
-                <a href="#quote" class="btn btn-outline" style="padding: 10px 20px; font-size: 0.8rem;">Request Quote</a>
-            </div>
-            <button class="hamburger" id="hamburger" aria-label="Menu">
-                <span></span><span></span><span></span>
-            </button>
         </div>
     </header>
 
     <main>
-        <!-- Cinematic Hero Section -->
+        <!-- Home / Hero Section -->
         <section class="hero" id="home">
-            <div class="container hero-container">
-                <div class="hero-content">
-                    <div class="hero-badge" data-reveal>World-Class Geotechnical Expertise</div>
-                    <h1 data-reveal>Build on <span class="text-glow">Certainty</span> with GEOSAFE.</h1>
-                    <p data-reveal>Merging elite soil engineering with advanced risk analysis to secure your structural future. Industry-leading precision for high-stakes projects.</p>
-                    <div class="hero-btns" data-reveal>
-                        <a href="#quote" class="btn btn-primary magnetic">Start Your Project</a>
-                        <a href="#services" class="btn btn-outline magnetic">View Expertises</a>
-                    </div>
-                    <div class="hero-stats" data-reveal>
-                        <div class="stat-mini">
-                            <span class="stat-num text-glow">500+</span>
-                            <span class="stat-label">Projects</span>
-                        </div>
-                        <div class="stat-mini">
-                            <span class="stat-num text-glow">15+</span>
-                            <span class="stat-label">Years XP</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="hero-visual" data-reveal>
-                    <canvas id="geo3d-canvas"></canvas>
-                    <div class="orbit-glow"></div>
-                </div>
-            </div>
-            <div class="scroll-indicator">
-                <div class="mouse"></div>
-                <span>Scroll to Explore</span>
+            <div class="hero-bg"></div>
+            <div class="hero-content reveal-up">
+                <span class="section-subtitle">Ingénierie Géotechnique</span>
+                <h1>BUREAU D'ÉTUDES <span class="text-gold">TECHNIQUES</span></h1>
+                <p>Partenaire de confiance en Ingénierie Géotechnique. Nous révélons les vérités cachées du sol pour transformer l'incertitude en données fiables.</p>
+                <a href="#about" class="btn btn-primary hover-target" style="margin-top: 20px;">Découvrir GEOSAFE</a>
             </div>
         </section>
 
-        <!-- Dynamic Expertises Grid -->
-        <section class="services section-padding" id="services">
+        <!-- About & Quote Section -->
+        <section class="about" id="about">
             <div class="container">
-                <div class="section-header" data-reveal>
-                    <h3>Expertises</h3>
-                    <h2>Precision Engineering for <span class="text-glow">Any Terrain</span></h2>
+                <div class="quote-block reveal-up">
+                    <p class="quote-text">« Le sol parle à ceux qui savent l'écouter. »</p>
+                    <div class="founder-info">
+                        <strong>Youssef CHAQQUOUR</strong><br>
+                        <span class="text-light" style="font-size: 0.8rem;">Fondateur & Gérant - Ingénieur Génie Civil</span>
+                    </div>
                 </div>
-                <div class="services-grid">
-                    <div class="service-card" data-reveal>
-                        <div class="service-icon"><i data-lucide="layers"></i></div>
-                        <h4>Soil Mechanics</h4>
-                        <p>Comprehensive laboratory testing and onsite analysis to determine optimal foundation strategies.</p>
-                        <a href="#" class="service-link">Learn More <i data-lucide="arrow-right"></i></a>
-                    </div>
-                    <div class="service-card" data-reveal>
-                        <div class="service-icon"><i data-lucide="activity"></i></div>
-                        <h4>Risk Assessment</h4>
-                        <p>Identifying geological hazards before they compromise your project's integrity.</p>
-                        <a href="#" class="service-link">Learn More <i data-lucide="arrow-right"></i></a>
-                    </div>
-                    <div class="service-card" data-reveal>
-                        <div class="service-icon"><i data-lucide="mountain"></i></div>
-                        <h4>Slope Stability</h4>
-                        <p>High-precision monitoring and reinforcement design for complex topography.</p>
-                        <a href="#" class="service-link">Learn More <i data-lucide="arrow-right"></i></a>
-                    </div>
+                
+                <div class="reveal-up" style="max-width: 800px; margin: 80px auto 0; text-align: center;">
+                    <h2 class="section-title text-navy">Notre <span class="text-gold">Mission</span></h2>
+                    <p style="font-size: 1.1rem; color: var(--text-body);">GEOSAFE est un bureau d'études technique marocain, né d'une conviction forte d'apporter des solutions géotechniques fiables, adaptées aux enjeux de sécurité, de durabilité et de performance des ouvrages.</p>
                 </div>
             </div>
         </section>
 
-        <!-- Portfolio Reveal -->
-        <section class="portfolio section-padding" id="portfolio">
+        <!-- Dynamic Expertise (Bento Grid) -->
+        <section class="expertise" id="expertise">
             <div class="container">
-                <div class="section-header" data-reveal>
-                    <h3>Portfolio</h3>
-                    <h2>Our Legacy in <span class="text-glow">Structural Safety</span></h2>
+                <div style="text-align: center; margin-bottom: 60px;" class="reveal-up">
+                    <span class="section-subtitle">Domaines d'Intervention</span>
+                    <h2 class="section-title text-navy">Nos <span class="text-gold">Expertises</span></h2>
                 </div>
-                <div class="portfolio-grid">
-                    <div class="project-card" data-reveal>
-                        <div class="project-img">
-                            <img src="project-1.jpg" alt="Complex Multi-Level Development">
-                            <div class="project-overlay">
-                                <span>Deep Foundation Study</span>
-                                <h4>City Horizon Tower</h4>
-                            </div>
+
+                <div class="bento-grid reveal-stagger">
+                    <!-- Card 1 -->
+                    <div class="bento-card span-8 hover-target">
+                        <i data-lucide="building-2" class="card-icon"></i>
+                        <h3 class="card-title">Excavations Urbaines</h3>
+                        <p class="card-desc">Conception et dimensionnement de soutènements pour fouilles profondes en milieu urbain dense.</p>
+                    </div>
+                    
+                    <!-- Card 2 -->
+                    <div class="bento-card span-4 hover-target bg-navy" style="color: white;">
+                        <i data-lucide="mountain" class="card-icon" style="color: white;"></i>
+                        <h3 class="card-title" style="color: var(--brand-gold);">Stabilité des pentes</h3>
+                        <p class="card-desc" style="color: #ccc;">Diagnostic et analyse des glissements de terrain.</p>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="bento-card span-6 hover-target">
+                        <i data-lucide="layers" class="card-icon"></i>
+                        <h3 class="card-title">Fondations</h3>
+                        <p class="card-desc">Dimensionnement de fondations superficielles, profondes et d'ouvrages d'art complexes.</p>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div class="bento-card span-6 hover-target">
+                        <i data-lucide="activity" class="card-icon"></i>
+                        <h3 class="card-title">Amélioration des Sols</h3>
+                        <p class="card-desc">Techniques avancées de renforcement pour les sols compressibles et instables.</p>
+                    </div>
+                    
+                    <!-- Missions G1-G5 Full Width Banner -->
+                    <div class="bento-card span-12 hover-target" style="flex-direction: row; align-items: center; justify-content: space-between; flex-wrap: wrap;">
+                        <div>
+                            <span class="section-subtitle">Norme NF P 94-500</span>
+                            <h3 class="card-title">Missions Géotechniques <span class="text-gold">G1 à G5</span></h3>
+                        </div>
+                        <div style="display: flex; gap: 15px; flex-wrap: wrap;">
+                            <span style="padding: 8px 16px; border: 1px solid var(--border); border-radius: 4px; font-weight: 600;">G1 - Préalable</span>
+                            <span style="padding: 8px 16px; border: 1px solid var(--border); border-radius: 4px; font-weight: 600;">G2 - Conception</span>
+                            <span style="padding: 8px 16px; border: 1px solid var(--border); border-radius: 4px; font-weight: 600;">G3 - Exécution</span>
+                            <span style="padding: 8px 16px; border: 1px solid var(--border); border-radius: 4px; font-weight: 600;">G4 - Supervision</span>
+                            <span style="padding: 8px 16px; border: 1px solid var(--border); border-radius: 4px; font-weight: 600;">G5 - Diagnostic</span>
                         </div>
                     </div>
-                    <div class="project-card" data-reveal>
-                        <div class="project-img">
-                            <img src="project-2.jpg" alt="Critical Infrastructure Reinforcement">
-                            <div class="project-overlay">
-                                <span>Risk Mitigation</span>
-                                <h4>Interstate Viaduct</h4>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- Stats Section -->
-        <section class="stats section-padding">
-            <div class="container stats-grid">
-                <div class="stat-item" data-reveal>
-                    <span class="stat-number" data-target="520">0</span>
-                    <span class="stat-text">Certified Studies</span>
-                </div>
-                <div class="stat-item" data-reveal>
-                    <span class="stat-number" data-target="150">0</span>
-                    <span class="stat-text">Industrial Clients</span>
-                </div>
-                <div class="stat-item" data-reveal>
-                    <span class="stat-number" data-target="99">0</span>
-                    <span class="stat-text">Safety Record %</span>
-                </div>
-            </div>
-        </section>
-
-        <!-- FAQ Glassmorphism -->
-        <section class="faq section-padding">
-            <div class="container">
-                <div class="section-header" data-reveal>
-                    <h3>FAQ</h3>
-                    <h2>Answering Your <span class="text-glow">Ground Concerns</span></h2>
-                </div>
-                <div class="faq-accordion" data-reveal>
-                    <div class="faq-item">
-                        <div class="faq-question">Why is a geotechnical study mandatory? <i data-lucide="chevron-down"></i></div>
-                        <div class="faq-answer">It ensures your structure is built on stable ground, preventing costly future damage and ensuring legal compliance.</div>
+        <!-- Values Section -->
+        <section class="values" id="valeurs">
+            <div class="container reveal-up">
+                <span class="section-subtitle" style="color: white;">Notre Vision</span>
+                <h2 class="section-title">Nos <span class="text-gold">Valeurs Fondamentales</span></h2>
+                
+                <div class="values-grid reveal-stagger">
+                    <div class="value-item hover-target">
+                        <h4>Sécurité</h4>
+                        <p>Protéger les ouvrages, les vies et l'avenir de vos infrastructures.</p>
                     </div>
-                    <div class="faq-item">
-                        <div class="faq-question">How long does a typical study take? <i data-lucide="chevron-down"></i></div>
-                        <div class="faq-answer">Depending on scope, a field and lab study usually takes between 2 to 4 weeks.</div>
+                    <div class="value-item hover-target">
+                        <h4>Rigueur</h4>
+                        <p>Analyser avec une précision extrême, concevoir avec la méthode la plus stricte.</p>
+                    </div>
+                    <div class="value-item hover-target">
+                        <h4>Confiance</h4>
+                        <p>Être fiable, totalement transparent et pleinement engagé envers nos clients.</p>
+                    </div>
+                    <div class="value-item hover-target">
+                        <h4>Innovation</h4>
+                        <p>Appliquer les meilleures solutions technologiques pour anticiper les défis.</p>
+                    </div>
+                    <div class="value-item hover-target">
+                        <h4>Utilité</h4>
+                        <p>Contribuer activement à des projets durables ayant un réel impact sociétal.</p>
                     </div>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer>
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-info">
-                    <img src="logo_horizontal.png" alt="GEOSAFE" style="height: 35px; margin-bottom: 20px;">
-                    <p>Securing the ground under our cities with world-class engineering and innovative risk analysis.</p>
-                </div>
-                <div class="footer-links">
-                    <h4>Company</h4>
-                    <ul>
-                        <li><a href="#services">Expertises</a></li>
-                        <li><a href="#portfolio">Our Work</a></li>
-                        <li><a href="#about">Innovation</a></li>
-                    </ul>
-                </div>
-                <div class="footer-links">
-                    <h4>Legal</h4>
-                    <ul>
-                        <li><a href="#">Privacy Policy</a></li>
-                        <li><a href="#">Terms of Service</a></li>
-                        <li><a href="#">Mentions Légales</a></li>
-                    </ul>
-                </div>
-                <div class="footer-links">
-                    <h4>Connect</h4>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-linkedin"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                    </div>
-                </div>
+    <!-- Footer translated -->
+    <footer id="contact">
+        <div class="footer-grid reveal-up">
+            <div>
+                <div class="footer-logo">GEO<span class="text-gold">SAFE</span></div>
+                <p style="color: var(--text-light); max-width: 300px;">Securing the ground under our cities with world-class engineering and innovative risk analysis.</p>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 GEOSAFE S.A.S. All rights reserved.</p>
-                <p>Designed for Excellence.</p>
+            
+            <div class="footer-contact">
+                <h4>Contact</h4>
+                <p><i data-lucide="map-pin"></i> Imm 7, Rue Moulay Rachid, Appt N°10, 4ème étage, Hassan, Rabat</p>
+                <p><i data-lucide="mail"></i> contact@geosafe.ma</p>
+                <p><i data-lucide="phone"></i> +212 6 73 16 16 11</p>
             </div>
+            
+            <div class="footer-links">
+                <h4>Réseaux</h4>
+                <ul>
+                    <li><a href="#" class="hover-target">LinkedIn</a></li>
+                    <li><a href="#" class="hover-target">Twitter</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copy">
+            <p>&copy; 2026 GEOSAFE. Tous droits réservés. | Designed for Excellence.</p>
         </div>
     </footer>
 
-    <!-- GSAP & Plugins -->
+    <!-- Scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-    <!-- Lenis Smooth Scroll -->
     <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.js"></script>
-    <!-- Three.js for Hero Visual -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     
     <script src="main.js"></script>
-    <script src="geo3d.js"></script>
     <script>
-        // Initialize Lucide Icons
         lucide.createIcons();
     </script>
 </body>
